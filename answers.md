@@ -26,7 +26,7 @@ Not only were web servers taken offline by a DDOS attack, but upload and downloa
     - `DOWNLOAD_MEGABITS`
     - `UPLOAD_MEGABITS`
     - `ratio`
-  
+   > Answer: `source="server_speedtest.csv" | eval new_field_name = 'DOWNLOAD_MEGABITS' / 'UPLOAD_MEGABITS' | sort -_time | table _time IP_ADDRESS UPLOAD_MEGABITS DOWNLOAD_MEGABITS ratio`
    > ![table report command](images/table_report_command.JPG)
    > ![table report save as](images/table_report_save_as.JPG)
    > ![report line graph visual](images/report_line_graph_visual.JPG)
@@ -34,7 +34,7 @@ Not only were web servers taken offline by a DDOS attack, but upload and downloa
 4. Answer the following questions:
 
     - Based on the report created, what is the approximate date and time of the attack?
-      > Answer: The attack took place @2330 on Saturday, February 22<sup>nd</sup>, and reached it's lowest point @1430 on Sunday,     February 23<sup>rd</sup>.
+      > Answer: The attack took place @2330 on Saturday, February 22<sup>nd</sup>, and reached its lowest point @1430 on Sunday,     February 23<sup>rd</sup>.
       
     - How long did it take your systems to recover?
       > Answer: It took 12 hours from the onset of the attack @2330 Saturday, February 22<sup>nd</sup>, to the time the system returned to normal @2330 Saturday, February 23<sup>rd</sup>. 
