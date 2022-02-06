@@ -66,7 +66,7 @@ Not only were web servers taken offline by a DDOS attack, but upload and downloa
   
    > ![table report command](images/table_report_command.JPG)
    > ![table report save as](images/table_report_save_as.JPG)
-   > ![report line graph vizual](report_line_graph_visual.JPG)
+   > ![report line graph visual](images/report_line_graph_visual.JPG)
 
 4. Answer the following questions:
 
