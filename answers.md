@@ -55,7 +55,7 @@ Not only were web servers taken offline by a DDOS attack, but upload and downloa
 2. Using the `eval` command, create a field called `ratio` that shows the ratio between the upload and download speeds.
   > Answer: `source="server_speedtest.csv" | eval new_field_name = 'DOWNLOAD_MEGABITS' / 'UPLOAD_MEGABITS'`
   > 
-  > ![eval command](images/eval_command.jpg)
+  > ![eval command](images/eval_command.JPG)
       
 3. Create a report using the Splunk's `table` command to display the following fields in a statistics report:
     - `_time`
@@ -64,9 +64,9 @@ Not only were web servers taken offline by a DDOS attack, but upload and downloa
     - `UPLOAD_MEGABITS`
     - `ratio`
   
-   > ![table report command](images/table_report_command.jpg)
-   > ![table report save as](images/table_report_save_as.jpg)
-   > ![report line graph vizual](report_line_graph_vizual.jpg)
+   > ![table report command](images/table_report_command.JPG)
+   > ![table report save as](images/table_report_save_as.JPG)
+   > ![report line graph vizual](report_line_graph_visual.JPG)
 
 4. Answer the following questions:
 
@@ -93,13 +93,13 @@ Not only were web servers taken offline by a DDOS attack, but upload and downloa
 
    > Answer: `source="nessus_logs.csv" |search dest_ip="10.11.36.23" | eval CRITICAL=IF(severity="critical", "Critical", "Non-Critical") | stats count by CRITICAL`
    > 
-   > ![CDBS_graph](images/CDBS_graph.jpg)
+   > ![CDBS_graph](images/CDBS_graph.JPG)
  
 3. Build an alert that monitors every day to see if this server has any critical vulnerabilities. If a vulnerability exists, have an alert emailed to `soc@vandalay.com`.
 
-   > ![Alert1](images/Alert1.jpg)
-   > ![Alert2](images/Alert1.jpg)
-   > ![CDBS_alert](images/CDBS_alert.jpg)
+   > ![Alert1](images/Alert1.JPG)
+   > ![Alert2](images/Alert2.JPG)
+   > ![CDBS_alert](images/CDBS_alert.JPG)
 
 ### Step 3: Drawing the (base)line
 
@@ -114,20 +114,20 @@ Not only were web servers taken offline by a DDOS attack, but upload and downloa
    > Answer: The attack started @0900 Friday, February 21<sup>st</sup> and stopped @1300 Friday, February 21<sup>st</sup>. 
    > 
    > Command: `source="Administrator_logs.csv" | stats count by name`
-   > ![bf1](images/bruteforce1.jpg)
+   > ![bf1](images/bruteforce1.JPG)
    > **Note that the number of `An account failed to log on` counts was: `1004`**
    >
    > Command: `source="Administrator_logs.csv" | stats count by name | sort -count | eval BruteForce=if(name="An account failed to log on" AND count>5, "Potential Brute Force", "Not Brute Force")`
-   > ![bf2](images/bruteforce2.jpg)
+   > ![bf2](images/bruteforce2.JPG)
         
 3. Determine a baseline of normal activity and a threshold that would alert if a brute force attack is occurring.
    > Answer: The baseline I chose is between `5-30`, and the threshold I chose was `40`. 
    
 4. Design an alert to check the threshold every hour and email the SOC team at SOC@vandalay.com if triggered. 
    > Answer: I set the threshold in the alert to `count>40`
-   > ![Alert3](images/alert3.jpg)
-   > ![Alert4](images/alert4.jpg)
-   > ![BF Alert](images/bf_alert.jpg)
+   > ![Alert3](images/alert3.JPG)
+   > ![Alert4](images/alert4.JPG)
+   > ![BF Alert](images/bf_alert.JPG)
    
 Submit the answers to the questions about the brute force timing, baseline and threshold. Additionally, provide a screenshot as proof that the alert has been created.
 
