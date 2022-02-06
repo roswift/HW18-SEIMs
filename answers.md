@@ -1,7 +1,5 @@
 ## Unit 18 Homework: Lets go Splunking!
 
----
-
 ## Vandalay Industries Monitoring Activity Instructions
 
 
@@ -93,8 +91,6 @@ Not only were web servers taken offline by a DDOS attack, but upload and downloa
    > ![Alert3](images/alert3.JPG)
    > ![Alert4](images/alert4.JPG)
    > ![BF Alert](images/bf_alert.JPG)
-   
-Submit the answers to the questions about the brute force timing, baseline and threshold. Additionally, provide a screenshot as proof that the alert has been created.
 
 ---
 
